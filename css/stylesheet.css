@@ -11,7 +11,7 @@
 }
 .page-header__logo{
 	display: inline-block;
-	flex-basis: 15%;
+	flex-basis: 180px;
 }
 .flex-container{
 	display: flex;
@@ -19,14 +19,13 @@
 	justify-content: space-between;
 }
 .page-header__main-nav{
-	flex-basis: 65%;
+	flex: 1 1 811px;
 	box-sizing: border-box;
 	flex-grow: 1;
 }
 .page-header__phones{
 	box-sizing: border-box;
-	flex-basis: 20%;
-	flex-shrink: 0;
+	flex: 0 1 200px;
 	text-align: right;
 }
 .page-header__main-nav{
@@ -54,6 +53,7 @@
 	font-size: 18px;
 	font-family: 'Lato', sans-serif;
 	position: relative;
+	font-weight: bold;
 }
 .active a{
 	border-bottom: 3px solid #4aa5f9;
@@ -121,3 +121,103 @@
 	margin-bottom: 3px;
 	margin-right: 20%;
 }
+.about-us{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;	
+	padding-top: 5px;
+}
+.about-us__description{
+	flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+.about-us__gallary{
+	flex-basis: 50%;
+	flex-grow: 1;
+}
+.about-us__advantages{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.about-us__advantage-item{
+	flex: 0 0 50%;
+	padding: 10px 0 10px 40px;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color: #ea7923;
+	position: relative;
+}
+.about-us__advantage-item:before{
+	content: "";
+    background-image: url(../img/sprite.png); 
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+.about-us__advantage-item:nth-child(1):before{ 
+	background-position: -159px 0;
+	width: 30px;
+	height: 22px;
+}
+.about-us__advantage-item:nth-child(2):before{
+	background-position: 0 0;
+	width: 30px; 
+	height: 24px;
+}
+.about-us__advantage-item:nth-child(3):before{
+	 background-position: -55px 0;
+	 width: 30px;
+	 height: 30px;
+}
+.about-us__advantage-item:nth-child(4):before{
+	 background-position: -110px 0;
+	 width: 24px; 
+	 height: 30px;
+}
+.about-us__text{
+	width: 90%;
+	color: #13152f;
+}
+.about-us__title{
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: normal;
+	margin-top: 65px;
+	margin-bottom: 35px;
+}
+.about-us__paragraph{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+}
+.about-us__gallary{
+	display: flex;
+	min-width: 690px;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+.about-us__gallary img{
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin: 0 5px 5px 0;
+}
+.about-us__gallary img:nth-child(3n+2){
+	margin-right: 0;
+}
+
+
+
+.sprite{ background: url('../img/sprite.png') no-repeat top left; } 
+
+.sprite.footer_email { background-position: -214px 0; height: 14px; } 
+.sprite.footer_home { background-position: -259px 0; height: 18px; } 
+.sprite.footer_phone { background-position: -304px 0; height: 20px; } 
+.sprite.quote_left { background-position: -349px 0; width: 25px; } 
+.sprite.quote_right { background-position: -399px 0; width: 25px; } 
