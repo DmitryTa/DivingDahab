@@ -136,10 +136,6 @@
     align-items: flex-start;
     padding-left: 30px;
 }
-.about-us__gallary{
-	flex-basis: 50%;
-	flex-grow: 1;
-}
 .about-us__advantages{
 	display: flex;
 	flex-wrap: wrap;
@@ -182,7 +178,7 @@
 	 height: 30px;
 }
 .about-us__text{
-	width: 90%;
+	width: 93%;
 	color: #13152f;
 }
 .about-us__title{
@@ -199,18 +195,104 @@
 }
 .about-us__gallary{
 	display: flex;
-	min-width: 690px;
+	flex: 1 1 50%;
+	min-width: 670px;
+	box-sizing: border-box;
 	flex-wrap: wrap;
-	justify-content: center;	
+	justify-content: center;
+	align-content: flex-start;	
 }
 .about-us__gallary img{
 	flex-grow: 1;
-	flex-shrink: 1;
+	flex-shrink: 10;
 	margin: 0 5px 5px 0;
 }
 .about-us__gallary img:nth-child(3n+2){
 	margin-right: 0;
 }
+.description{
+	
+	display: flex;
+}
+section[class^="description__"]{
+	flex-basis: 460px;
+	flex-grow: 1;
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-bottom: 265px;
+	background-size: cover;
+	position: relative;
+}
+section[class^="description__"]:not(:last-child){
+	margin-right: 6px;
+}
+.description__title{
+ 	font-family: 'Roboto Slab', serif;
+	font-size: 36px;
+	font-weight: normal;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+.description__title-block{
+	width: 250px;
+	padding-left: 10px;
+	background-color: #13152e;
+}
+.description__diving{
+	background: url(../img/description__diving.jpg);
+}
+.description__places{
+	background: url(../img/description__places.jpg);
+}
+.description__residence{
+	background: url(../img/description__residence.jpg);
+}
+.description-hover-block{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 56%;
+	padding-left: 48%;
+	padding-bottom: 10%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(19, 21, 46, 0.859);
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+	overflow: hidden;
+}
+.description-hover-block > p{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 26px;
+	padding: 0;
+	margin: 0;
+}
+.description-hover-block > p span{
+	display: inline-block;
+	background-color: #13152e;
+	padding: 1px 7px;
+	margin-bottom: 2px;
+	transform: translateX(250px);
+	transition: transform 0.4s ease-in;
+}
+section[class^="description__"]:hover > .description-hover-block{
+	opacity: 1;
+}
+section[class^="description__"]:hover > .description-hover-block p span{
+	transform: translateX(0);
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -221,3 +303,4 @@
 .sprite.footer_phone { background-position: -304px 0; height: 20px; } 
 .sprite.quote_left { background-position: -349px 0; width: 25px; } 
 .sprite.quote_right { background-position: -399px 0; width: 25px; } 
+
