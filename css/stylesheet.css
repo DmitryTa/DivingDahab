@@ -226,6 +226,9 @@ section[class^="description__"]{
 section[class^="description__"]:not(:last-child){
 	margin-right: 6px;
 }
+section[class^="description__"] a{
+	text-decoration: none;
+}
 .description__title{
  	font-family: 'Roboto Slab', serif;
 	font-size: 36px;
@@ -279,12 +282,45 @@ section[class^="description__"]:not(:last-child){
 	transform: translateX(250px);
 	transition: transform 0.4s ease-in;
 }
-section[class^="description__"]:hover > .description-hover-block{
+section[class^="description__"] a:hover > .description-hover-block{
 	opacity: 1;
 }
-section[class^="description__"]:hover > .description-hover-block p span{
+section[class^="description__"] a:hover > .description-hover-block p span{
 	transform: translateX(0);
-
+}
+.call-to-action{
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+.call-to-action .container{
+	text-align: center;
+	color: #13152f;
+}
+.call-to-action__title{
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	line-height: 30px; 
+	margin-bottom: 35px; 
+}
+.call-to-action__text{
+	margin: auto;
+	width: 770px;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	padding-bottom: 43px;
+}
+.call-to-action__button a{
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Roboto Slab', serif;
+	color: #ffffff;
+	padding: 10px 40px;
+	background-color: #47a4f9;
+	transition: background-color .3s ease-in;
+}
+.call-to-action__button a:hover{
+	background: #43bbf9;
 }
 
 
