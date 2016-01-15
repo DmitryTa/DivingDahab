@@ -166,8 +166,8 @@
 		<!-- Footer -->
 
 		<footer class="page-footer">
-			<div class="container flex-container">
-				<div class="page-footer__adress">
+			<div class="container">
+				<section class="page-footer__adress">
 					<h3 class="page-footer__adress-title">Россия</h3>
 					<a href="tel:+7 911 123-45-65" class="page-footer__adress-phone">+7 911 123-45-65</a>
 					<a href="mailto:nfo-ru@divingdahab.ru" class="page-footer__adress-email">nfo-ru@divingdahab.ru</a>
@@ -175,10 +175,32 @@
 					<p class="page-footer__adress-home">Blue Hole Road, 12, Dahab</p>
 					<a href="tel:+20 124 547-12-89" class="page-footer__adress-phone">+20 124 547-12-89</a>
 					<a href="mailto:info@divingdahab.ru" class="page-footer__adress-email">info@divingdahab.ru</a>
-				</div>
-				<div class="page-footer__form">
-					
-				</div>
+				</section>
+				<section class="page-footer__contact">
+					<h3 class="page-footer__form-title">Напишите нам</h3>
+					<p class="page-footer__form-text">Оставьте ваши отзывы, пожелания или вопросы. <br>
+					Мы обязательно ответим вам.</p>
+					<form class="page-footer__form">
+						<div class="page-footer__flex-container">
+							<div class="page-footer__form-field">
+								<label for="name">Имя</label>
+								<input type="text" required  id="name">
+								<div class="decor"></div>
+							</div>
+							<div class="page-footer__form-field">
+								<label for="email">e-mail</label>
+								<input type="email" required  id="email">
+								<div class="decor"></div>
+							</div>
+							<div class="page-footer__form-field">
+								<label for="message">Сообщение</label>
+								<input type="text" required id="message">
+								<div class="decor ss"></div>
+							</div>
+						</div>
+						<button class="page-footer__form-btn">Отправить</button>
+					</form>
+				</section>
 			</div>
 		</footer>
 	</main>

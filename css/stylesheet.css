@@ -383,6 +383,11 @@ section[class^="description__"] a:hover > .description-hover-block p span{
 .team__block__hover:hover p{
 	transform: translateX(0);
 }
+.page-footer > .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
 .page-footer{
 	background-image: url(../img/bg_footer.jpg);
 	background-size: cover;
@@ -393,6 +398,7 @@ section[class^="description__"] a:hover > .description-hover-block p span{
 	border: 1px solid #3b9efa;
 	box-sizing: border-box;
 	padding: 10px 0 45px 18px;
+	margin-right: 8%;
 }
 .page-footer__adress-title{
 	font-family: 'Roboto Slab', serif;
@@ -444,11 +450,91 @@ section[class^="description__"] a:hover > .description-hover-block p span{
 	height: 18px;
 	width: 20px;
 }
+.page-footer__contact{
+	flex: 1 1 680px;
+	box-sizing: border-box;
+	padding: 10px 0 0 0;
+}
+.page-footer__form-title{
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: normal;
+}
+.page-footer__form-text{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 26px;
+	padding: 0 0 20px;
+}
+.page-footer__flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.page-footer__form-field{
+  position: relative;
+}
+label{
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 40px;
+}
+label[for="email"]{
+  left: calc(8.5% + 10px);
+}
+.page-footer__form-field{
+  flex: 1 1 235px;
+}
+input{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  height: 40px;
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #3b9efa;
+  margin-bottom: 30px;
+}
+input[type="email"]{
+  margin-left: 8.5%;
+  width: 91.5%;
+}
+.decor{
+	width: 100%;
+}
+.decor:before,
+.decor:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: 29px;
+    background-color:  #43bbf9;
+    transition: width 0.3s ease-in;
+}
+.decor:before {
+    left: 50%;
+}
+input[type="text"] ~ .decor:after {
+    right: 50%;
+}
+input[type="email"] ~ .decor:after {
+    right: 42%;
+}
 
+input:focus ~ .decor:before,
+input:focus ~ .decor:after {
+    width:50%;
 
-
-
-
+}
 
 
 
