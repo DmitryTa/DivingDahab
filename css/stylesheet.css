@@ -1181,4 +1181,15 @@ input:valid ~  label {
 	.slider__item span{
 		width: 90%;
 		padding: 0;
+	}
+	.page-header__phone a{
+		font-size: 15px;
+	}
+	.page-header__phone{
+		padding: 8px 6px;
+	}
+	.description-hover-block{
+		padding-left: 30%;
+		padding-top: 95%;
+	}	
 }
