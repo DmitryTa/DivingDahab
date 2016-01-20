@@ -75,6 +75,18 @@
 .page-header__main-nav ul li > a:hover:after{
 	transform: translateY(0px);
 	opacity: 1;
+} 
+.page-header__mobile-menu > ul{
+		display: none;
+
+	}
+input[type="checkbox"]{
+	display: none;
+}
+label[for="mobile-menu"]{
+	cursor: pointer;
+	position: relative;
+	display: none;
 }
 .page-header__phones{
 	margin-left: 25px;
@@ -555,7 +567,9 @@ section[class^="description__"] a:hover > .description-hover-block p span{
 .page-footer__form-field{
   position: relative;
 }
-label{
+label[for="name"],
+label[for="email"],
+label[for="message"]{
   position: absolute;
   bottom: 35px;
   left: 10px;
@@ -947,12 +961,52 @@ input:valid ~  label {
 @media(max-width: 668px){
 	.page-header__main-nav{
 		padding: 20px 20px;
+		text-align: right;
+	}
+	.page-header__main-nav > ul{
+		display: none;
+	}
+	label[for="mobile-menu"]{
+		display: block;
+	}
+	label[for="mobile-menu"]:after{
+		content: "";
+		width: 32px;
+		height: 6px;
+		border-radius: 10px;
+		position: absolute;
+		right: 0;
+		top: -2.5px;
+		background-color: #1d2038;
+		box-shadow: 0 -10px 0 0px #1d2038, 0 10px 0 0px #1d2038 ;
+	}
+	.page-header__mobile-menu{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		transition: all .4s ease-in;
+	}
+	input[type="checkbox"]:checked ~ .page-header__mobile-menu ul{
+		display: block;
+	}
+	.page-header__mobile-menu{
+		height: 0;
+	}
+	input[type="checkbox"]:checked ~ .page-header__mobile-menu{
+		height: 200px;
+	}
+	.page-header__mobile-menu ul li {
+		display: block;
+		margin-bottom: 16px;
+	}
+	.page-header__mobile-menu ul li a{
+		font-size: 20px;
 	}
 	.page-header__title-main{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.page-header__title-secondary{
-		font-size: 18px;
+		font-size: 15px;
 	}
 	.about-us__gallary{
 		display: none;
@@ -1026,6 +1080,9 @@ input:valid ~  label {
 	}
 	.page-footer__form{
 		text-align: center;
+	}
+	.page-footer__form-field:last-child {
+    	flex: 0 1 95%;
 	}
 	.copyrights{
 		padding-top: 60px;
