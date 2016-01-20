@@ -86,7 +86,7 @@ input[type="checkbox"]{
 label[for="mobile-menu"]{
 	cursor: pointer;
 	position: relative;
-	display: none;
+	display: none; 
 }
 .page-header__phones{
 	margin-left: 25px;
@@ -995,6 +995,10 @@ input:valid ~  label {
 	input[type="checkbox"]:checked ~ .page-header__mobile-menu{
 		height: 200px;
 	}
+	input[type="checkbox"]:checked ~ .page-header__mobile-menu ul li a{
+		opacity: 1;
+		transition: all .4s ease-in;
+	}
 	.page-header__mobile-menu ul li {
 		display: block;
 		margin-bottom: 16px;
@@ -1003,10 +1007,10 @@ input:valid ~  label {
 		font-size: 20px;
 	}
 	.page-header__title-main{
-		font-size: 20px;
+		font-size: 24px;
 	}
 	.page-header__title-secondary{
-		font-size: 15px;
+		font-size: 18px;
 	}
 	.about-us__gallary{
 		display: none;
@@ -1152,6 +1156,11 @@ input:valid ~  label {
 	}
 }
 @media(max-width: 385px){
+	.page-header__logo,
+	.page-header__phones{
+		flex-basis: 48%;
+		margin: 0;
+	}
 	.description-hover-block{
 		padding-left: 45%;
 		padding-top: 70%;
@@ -1172,4 +1181,15 @@ input:valid ~  label {
 	.slider__item span{
 		width: 90%;
 		padding: 0;
+	}
+	.page-header__phone a{
+		font-size: 15px;
+	}
+	.page-header__phone{
+		padding: 8px 6px;
+	}
+	.description-hover-block{
+		padding-left: 30%;
+		padding-top: 85%;
+	}	
 }
