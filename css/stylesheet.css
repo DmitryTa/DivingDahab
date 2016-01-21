@@ -1205,6 +1205,13 @@ input[type="email"] ~ .decor:after {
 	.slider__item span:before{
 		display: none;
 	}
+	.modal-window__block{
+		max-width: 90%;
+		height: 90%;
+	}
+	.modal-window__flex-item input{
+		margin-right: 20%;
+	}
 }
 @media(max-width: 320px){
 	.container{
@@ -1217,10 +1224,6 @@ input[type="email"] ~ .decor:after {
 	.description-hover-block{
 		padding-left: 30%;
 		padding-top: 85%;
-	}
-	.modal-window__block{
-		max-width: 90%;
-		height: 100%;
 	}
 }
 .modal-window{
