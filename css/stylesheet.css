@@ -1214,7 +1214,10 @@ input[type="email"] ~ .decor:after {
 	.description-hover-block{
 		padding-left: 30%;
 		padding-top: 85%;
-	}	
+	}
+	.modal-window__block{
+		max-width: 90%;
+	}
 }
 .modal-window{
 	position: fixed;
