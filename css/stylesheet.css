@@ -927,9 +927,6 @@ input[type="email"] ~ .decor:after {
 		max-width: 750px;
 		margin: 0 auto;
 	}
-	.container{
-		padding: 0 15px;	
-	}
 	.page-header{
 		background-position: 70% center;
 	}
@@ -1200,6 +1197,10 @@ input[type="email"] ~ .decor:after {
 	}
 }
 @media(max-width: 385px){
+	.page-header > .container,
+	.page-footer > .container{
+		padding: 0 8px;	
+	}
 	.page-header__phones{
 		flex-basis: 58%;
 		margin: 0;
