@@ -1122,6 +1122,9 @@ input[type="email"] ~ .decor:after {
     .modal-window__flex-item:nth-child(odd){
 	  	display: none;
 	}
+	.modal-window__flex-item:first-child{
+		display: block;
+	}
 	.modal-window__flex{
 		justify-content: flex-start;
 	}
@@ -1217,6 +1220,7 @@ input[type="email"] ~ .decor:after {
 	}
 	.modal-window__block{
 		max-width: 90%;
+		height: 100%;
 	}
 }
 .modal-window{
