@@ -848,6 +848,7 @@ input[type="email"] ~ .decor:after {
 	}
 }
 @media(max-width: 1100px){
+
 	header .flex-container{
 		flex-wrap: wrap;
 	}
@@ -884,6 +885,13 @@ input[type="email"] ~ .decor:after {
 	}
 
 @media(max-width: 1000px){
+	.page-header > .container,
+	.page-footer > .container{
+		padding: 0 15px;	
+	}
+	.about-us__description{
+		padding-left: 15px;
+	}
 	.about-us{
 		flex-wrap: wrap;
 	}
@@ -918,6 +926,9 @@ input[type="email"] ~ .decor:after {
 	.about-us__gallary{
 		max-width: 750px;
 		margin: 0 auto;
+	}
+	.container{
+		padding: 0 15px;	
 	}
 	.page-header{
 		background-position: 70% center;
@@ -959,7 +970,10 @@ input[type="email"] ~ .decor:after {
 		flex: 0 0 305px;
 	}
 	.page-footer__adress-title{
-		margin-bottom: 24px;
+		margin-bottom: 30px;
+	}
+	.page-footer__form-btn{
+		margin-top: -15px;
 	}
 	.page-footer__adress{
 		margin-right: 22px;
