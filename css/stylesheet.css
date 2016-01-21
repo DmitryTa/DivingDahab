@@ -1042,6 +1042,9 @@ input[type="email"] ~ .decor:after {
 		height: 100%;
 		display: inline-block;
 	}
+	.about-us__advantages{
+		padding-left: 20px;
+	}
 	.reviews{
 		padding-bottom: 0;
 	}
@@ -1114,10 +1117,13 @@ input[type="email"] ~ .decor:after {
     }
     .modal-window__flex-item{
     	min-width: 200px;
-    	margin-right: 5%;
+    	margin-right: 10%;
     }
     .modal-window__flex-item:nth-child(odd){
 	  	display: none;
+	}
+	.modal-window__flex-item:first-child{
+		display: block;
 	}
 	.modal-window__flex{
 		justify-content: flex-start;
@@ -1199,6 +1205,13 @@ input[type="email"] ~ .decor:after {
 	.slider__item span:before{
 		display: none;
 	}
+	.modal-window__block{
+		max-width: 90%;
+		height: 90%;
+	}
+	.modal-window__flex-item input{
+		margin-right: 40px;
+	}
 }
 @media(max-width: 320px){
 	.container{
@@ -1211,7 +1224,7 @@ input[type="email"] ~ .decor:after {
 	.description-hover-block{
 		padding-left: 30%;
 		padding-top: 85%;
-	}	
+	}
 }
 .modal-window{
 	position: fixed;
