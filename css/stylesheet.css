@@ -1210,7 +1210,7 @@ input[type="email"] ~ .decor:after {
 		height: 90%;
 	}
 	.modal-window__flex-item input{
-		margin-right: 20%;
+		margin-right: 40px;
 	}
 }
 @media(max-width: 320px){
