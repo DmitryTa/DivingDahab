@@ -14,3 +14,17 @@ $(document).ready(function(){
   ]
   });
 });
+
+var 
+    modalButton = document.getElementById('modalButton'),
+    modalClose = document.getElementById('modalClose');
+
+
+
+modalButton.onclick = function(e) {
+  e.preventDefault();
+  modal.classList.toggle('modal-window-show');}
+
+modalClose.onclick = function(e) {
+  e.preventDefault();
+  modal.classList.toggle('modal-window-show');}

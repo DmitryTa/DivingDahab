@@ -592,7 +592,7 @@ label[for="email"]{
 .page-footer__form-field:last-child{
 	flex: 1 1 100%;
 }
-input{
+.page-footer__input{
   width: 100%;
   box-sizing: border-box;
   padding: 0 15px;
@@ -631,12 +631,12 @@ input[type="text"] ~ .decor:after {
 input[type="email"] ~ .decor:after {
     right: 42%;
 }
-input:focus ~ .decor:before,
-input:focus ~ .decor:after {
+.page-footer__input:focus ~ .decor:before,
+.page-footer__input:focus ~ .decor:after {
     width:50%;
 }
-input:focus ~  label,
-input:valid ~  label {
+.page-footer__input:focus ~  label,
+.page-footer__input:valid ~  label {
     font-size: 15px;
     transform: translateY(-28px);
 }
@@ -908,6 +908,9 @@ input:valid ~  label {
 	.page-footer__adress{
 		margin-right: 40px;
 	}
+	.modal-window__block{
+		overflow: scroll;
+	}
 }
 @media(max-width: 768px){
 	.container,
@@ -1106,7 +1109,20 @@ input:valid ~  label {
     .copyrights__text{
     	margin-bottom: 25px;
     }
+    .modal-window__flex-item{
+    	flex: 1 1 300px;
+    }
+    .modal-window__flex-item{
+    	min-width: 200px;
+    	margin-right: 5%;
+    }
+    .modal-window__flex-item:nth-child(odd){
+	  	display: none;
 	}
+	.modal-window__flex{
+		justify-content: flex-start;
+	}
+}
 }
 @media(max-width: 578px){
 	.about-us__advantage-item{
@@ -1192,10 +1208,169 @@ input:valid ~  label {
 		width: 90%;
 		padding: 0;
 	}
-	
-	
 	.description-hover-block{
 		padding-left: 30%;
 		padding-top: 85%;
 	}	
+}
+.modal-window{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(44, 48, 49, 0.39);
+	top: 0;
+	display: none;
+}
+.modal-window-show{
+	display: block;
+}
+.modal-window__block{
+	width: 65%;
+	max-height: 85%;
+	padding: 45px 60px;
+	background-color: #ffffff;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.modal-window__title{
+	margin: 0;
+	margin-bottom: 70px;
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: 300;
+	color: #13152e;
+}
+.modal-window__flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.modal-window__flex-item{
+	position: relative;
+	margin-bottom: 45px;
+	flex: 1 1 40%;
+	font-family: 'Roboto Slab', serif;
+  	font-size: 18px;
+  	color: #13152e;
+}
+.modal-window__flex-item > label{
+	position: absolute;
+	top: -25px;
+}
+.modal-window__flex-item:not(.two-fields) > input,
+.modal-window__flex-item:not(.two-fields) > select{
+	width: 100%;
+	height: 50px;
+	background-color: #f9f7f7;
+}
+.modal-window__flex-item:nth-child(odd){
+	margin-right: 30px;
+}
+.modal-window__flex-item:last-child{
+	flex: 1 1 100%;
+	margin-right: 0;
+}
+.modal-window__flex-item.two-fields input{
+	width: 26%;
+	margin-right: 25px;
+	height: 25px;
+	background-color: #f9f7f7;	
+}
+.modal-window__flex-item input,
+.modal-window__flex-item select{
+	border: 0;	
+	outline: 0;
+	box-sizing: border-box;
+	padding: 0 14px;
+	font-size: 22px;
+	color: #13152e;
+}
+.modal-window__flex-item input:focus,
+.modal-window__flex-item select:focus{
+	border: 1px solid grey;
+}
+
+.modal-window__flex-item.two-fields select{
+	width: calc(74% - 34px);
+	height: 25px;
+	background-color: #f9f7f7;
+	border: 0;	
+	outline: 0;
+}
+.modal-window__flex-item.two-fields span{
+	display: block;
+}
+.modal-window__flex-item textarea{
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 105px;
+	max-height: 105px;
+	background-color: #f9f7f7;
+	border: 0;	
+	outline: 0;
+	padding: 15px 15px;
+	box-sizing: border-box;
+}
+.modal-window__flex-item textarea:focus{
+	border: 1px solid grey;
+	font-size: 20px;
+}
+.input-definition{
+	font-weight: 300;
+	font-size: 12px;
+	margin-top: 8px;
+	color: #818181;
+}
+.modal-window__btn{
+	text-align: right;
+}
+.modal-window__btn button{
+	color: #ffffff;
+	font-size: 18px;
+	background-color: #3b9efa;
+	font-family: 'Roboto Slab', serif;
+	font-weight: normal;
+	width: 215px;
+	height: 50px;
+	border: 0;
+	outline: 0;
+	transition: background-color 0.3s ease-in;
+}
+.modal-window__btn button:hover{
+	background: #43bbf9;
+}
+.modal-window-close{
+	text-align: right;
+}
+.modal-window-close a{
+	position: relative;
+	padding: 10px;
+	right: -35px;
+}
+.modal-window-close a:after,
+.modal-window-close a:before{
+	content: "";
+	width: 13px;
+	height: 2px;
+	background-color: #13152e;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.4s ease-in;
+}
+.modal-window-close a:after{
+	transform: rotate(45deg);
+		
+}
+.modal-window-close a:before{
+	transform: rotate(-45deg);
+	
+}
+.modal-window-close a:hover:after,
+.modal-window-close a:hover:before{
+	width: 18px;
+	height: 3px;
 }

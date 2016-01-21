@@ -148,7 +148,7 @@
 			<div class="container">
 				<div class="call-to-action__title">Хватит думать, пора нырять!</div>
 				<div class="call-to-action__text">Если дайвинг - это то, о чем ты так давно мечтал,  то пришло время действовать - просто оставь заявку  на предполагаемую дату начала погружений, а мы перезвоним тебе, обсудим детали и ответим на все твои вопросы!</div>
-				<div class="call-to-action__button"><a href="#">Записаться</a></div>
+				<div class="call-to-action__button"><a href="#" id="modalButton">Записаться</a></div>
 			</div>
 		</article>
 		<article class="team">
@@ -245,17 +245,17 @@
 					<form class="page-footer__form">
 						<div class="page-footer__flex-container">
 							<div class="page-footer__form-field">
-								<input type="text" required  id="name">
+								<input class="page-footer__input" type="text" required  id="name">
 								<label for="name">Имя</label>
 								<div class="decor"></div>
 							</div>
 							<div class="page-footer__form-field">
-								<input type="email" required  id="email">
+								<input class="page-footer__input" type="email" required  id="email">
 								<label for="email">e-mail</label>
 								<div class="decor"></div>
 							</div>
 							<div class="page-footer__form-field">
-								<input type="text"  id="message" required>
+								<input class="page-footer__input" type="text"  id="message" required>
 								<label for="message">Сообщение</label>
 								<div class="decor"></div>
 							</div>
@@ -272,6 +272,85 @@
 					</div>
 				</div>
 			</div>
+			<div id="modal" class="modal-window ">
+				<div class="modal-window__block">
+					<div id="modalClose" class="modal-window-close"><a href="#"></a></div>
+					<h2 class="modal-window__title">Оставьте заявку, и мы с вами свяжемся</h2>
+         <form action="" class="modal-window__form">
+           <div class="modal-window__flex">
+              <div class="modal-window__flex-item">
+				<label for="SelectCourse">Выберите курс</label>
+                <select name="" id="SelectCourse" class="select-course">
+				  <option value=""></option>
+                  <option value="">Для начинающих</option>
+                  <option value="">Для продвинутых</option>
+                  <option value="">Спецкурсы</option>
+                  <option value="">Персональный дайвинг</option>
+                </select>
+              </div>
+			  <div class="modal-window__flex-item">
+              	<label>Имя</label>
+              	<input type="text">
+			</div>
+			<div class="modal-window__flex-item two-fields">
+              <label for="modalSelectMonth">Начало занятий</label>
+              <input type="number" min="1" max="31">
+              <select name="" id="modalSelectMonth" class="month-select">
+                    <option value=""></option>
+                    <option value="">Январь</option>
+                    <option value="">Февраль</option>
+                    <option value="">Март</option>
+                    <option value="">Апрель</option>
+                    <option value="">Май</option>
+                    <option value="">Июнь</option>
+                    <option value="">Июль</option>
+                    <option value="">Август</option>
+                    <option value="">Сентябрь</option>
+                    <option value="">Октябрь</option>
+                    <option value="">Ноябрь</option>
+                    <option value="">Декабрь</option>
+                  </select>
+                  <span class="input-definition">Когда желаете начать обучение?</span>
+			</div>
+			<div class="modal-window__flex-item">
+               <label for="tel">Телефон</label>
+               <input type="tel" id="tel">
+			</div>
+			<div class="modal-window__flex-item two-fields">
+              <label>Свободны до</label>
+              <input type="number" min="1" max="31">
+                  <select name="" id="modalSelectMonth" class="month-select">
+                    <option value=""></option>
+                    <option value="">Январь</option>
+                    <option value="">Февраль</option>
+                    <option value="">Март</option>
+                    <option value="">Апрель</option>
+                    <option value="">Май</option>
+                    <option value="">Июнь</option>
+                    <option value="">Июль</option>
+                    <option value="">Август</option>
+                    <option value="">Сентябрь</option>
+                    <option value="">Октябрь</option>
+                    <option value="">Ноябрь</option>
+                    <option value="">Декабрь</option>
+                  </select>
+                  <span class="input-definition">До какой даты планируете заниматься?</span>
+			</div>
+			<div class="modal-window__flex-item">
+              <label for="mail">e-mail</label>
+              <input type="text" id="mail">
+			</div>
+			<div class="modal-window__flex-item">
+               <label for="text-field">Пожелания</label>
+               <textarea id="text-field"></textarea>
+			</div>	
+            </div>
+            <div class="modal-window__btn">
+            	<button>Записаться</button>
+            </div>
+            </form>
+            </div>
+            </div>
 		</footer>
 	<script src="js/jquery-2.2.0.min.js"></script>
 	<script src="js/slick.min.js"></script>	
