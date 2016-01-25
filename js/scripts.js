@@ -15,11 +15,8 @@ $(document).ready(function(){
   });
 });
 
-var 
-    modalButton = document.getElementById('modalButton'),
+var modalButton = document.getElementById('modalButton'),
     modalClose = document.getElementById('modalClose');
-
-
 
 modalButton.onclick = function(e) {
   e.preventDefault();
